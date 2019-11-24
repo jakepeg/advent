@@ -1,25 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import data from "./doors.json";
 
 function App() {
+  const clearLocalData = () => {
+    localStorage.clear();
+    console.log("clear localData");
+  };
+
+  let localData = JSON.parse(localStorage.getItem("openedDoors"));
+
+  const [openedArr, setOpenedArr] = useState(localData ? localData : []);
+  const month = 10;
+  const today = new Date();
+
+  const openDoor = e => {
+    let correctedDay = parseInt(e.currentTarget.id) - parseInt(1);
+    if (today.getDate() >= e.currentTarget.id && today.getMonth() === month) {
+      e.currentTarget.childNodes[0].classList.add("opened");
+      e.currentTarget.parentElement.classList.add("glow");
+      const newValue = [...openedArr, e.currentTarget.id];
+      setOpenedArr(newValue);
+      localStorage.setItem("openedDoors", JSON.stringify(newValue));
+      localData = JSON.parse(localStorage.getItem("openedDoors"));
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ul className="image-grid">
+      {data.map(item => (
+        <li
+          key={item.door}
+          className={
+            JSON.stringify(localData).includes(item.door) ? "glow" : ""
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <div onClick={openDoor} id={item.door} className="flip-container">
+            <div
+              className={
+                JSON.stringify(localData).includes(item.door)
+                  ? "flipper opened"
+                  : "flipper"
+              }
+            >
+              <div className="front">
+                <p>{item.door}</p>
+              </div>
+              <div className="back">
+                <img key={item.door} src={item.image} alt="xmas" />
+              </div>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }
 
