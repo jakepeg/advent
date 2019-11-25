@@ -3,6 +3,10 @@ import "./App.css";
 import data from "./doors.json";
 import { Helmet } from "react-helmet";
 import CookieConsent from "react-cookie-consent";
+import ReactGA from "react-ga";
+
+ReactGA.initialize("UA-153283716-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   const clearLocalData = () => {
