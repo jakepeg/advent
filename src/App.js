@@ -2,22 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import data from "./doors.json";
 import { Helmet } from "react-helmet";
-import CookieConsent from "react-cookie-consent";
-import ReactGA from "react-ga";
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  TwitterIcon,
-  RedditShareButton,
-  RedditIcon,
-  EmailShareButton,
-  EmailIcon
-} from "react-share";
-
-ReactGA.initialize("UA-153283716-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
+import Footer from "./components/Footer";
 
 function App() {
   const clearLocalData = () => {
@@ -46,7 +31,9 @@ function App() {
     <div>
       <Helmet>
         <title>Advent Calendar</title>
+        <meta property="og:title" content="Advent Calendar" />
         <meta name="description" content="Online Advent Calendar" />
+        <meta property="og:description" content="Online Advent Calendar" />
       </Helmet>
       <h1>Christmas is coming!</h1>
       <ul className="image-grid">
@@ -76,17 +63,7 @@ function App() {
           </li>
         ))}
       </ul>
-      <div>
-        <FacebookShareButton
-          url="https://24doors.netlify.com/"
-          quote="Christmas is coming! Count down the days with the Online Advent Calendar"
-        >
-          <FacebookIcon size={32} round={true} />
-        </FacebookShareButton>
-      </div>
-      <CookieConsent>
-        This website uses cookies to enhance the user experience.
-      </CookieConsent>
+      <Footer />
     </div>
   );
 }
