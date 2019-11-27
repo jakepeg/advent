@@ -56,13 +56,7 @@ function Footer() {
         <div className="footer-panel">
           Get reminders
           <br />
-          <form name="contact" method="POST" data-netlify="true">
-            {/* <form
-            className="contactForm"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-          > */}
+          {/* <form name="contact" method="POST" data-netlify="true">
             <input
               type="email"
               id="email"
@@ -73,14 +67,37 @@ function Footer() {
             <button className="formSend" type="submit">
               Sign up
             </button>
+          </form> */}
+          <form name="contact" method="POST" data-netlify="true">
+            <p>
+              <label>
+                Your Name: <input type="text" name="name" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your Email: <input type="email" name="email" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your Role:{" "}
+                <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label>
+                Message: <textarea name="message"></textarea>
+              </label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
           </form>
         </div>
-        {/* <div className="footer-panel">
-          Calendars for Business
-          <br />
-          <br />
-          Coming Soon!
-        </div> */}
       </div>
       <CookieConsent>
         This website uses cookies to enhance the user experience.
