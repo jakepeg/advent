@@ -10,6 +10,7 @@ import {
   EmailShareButton,
   EmailIcon
 } from "react-share";
+import Mailchimp from "react-mailchimp-form";
 
 ReactGA.initialize("UA-153283716-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -56,19 +57,17 @@ function Footer() {
         <div className="footer-panel">
           Get reminders
           <br />
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="email address"
-              required
-            />
-            <button className="formSend" type="submit">
-              Sign up
-            </button>
-          </form>
+          <Mailchimp
+            action="https://jakekemsley.us4.list-manage.com/subscribe/post?u=22f4570f66e06f6cf8e81ed52&amp;id=d76c9352ea"
+            fields={[
+              {
+                name: "EMAIL",
+                placeholder: "Email",
+                type: "email",
+                required: true
+              }
+            ]}
+          />
         </div>
       </div>
       <CookieConsent>
