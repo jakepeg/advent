@@ -20,9 +20,7 @@ function Footer() {
       <div className="footer">
         <div className="footer-panel">
           <p>
-            Digital Advent Calendar v0.1
-            <br />
-            <br /> Made with <span className="heart">&hearts;</span> by{" "}
+            Made with <span className="heart">&hearts;</span> by{" "}
             <a href="https://www.jakekemsley.com" target="_blank">
               Kempo
             </a>
@@ -77,12 +75,12 @@ function Footer() {
             </button>
           </form>
         </div>
-        <div className="footer-panel">
+        {/* <div className="footer-panel">
           Calendars for Business
           <br />
           <br />
           Coming Soon!
-        </div>
+        </div> */}
       </div>
       <CookieConsent>
         This website uses cookies to enhance the user experience.

@@ -67,7 +67,7 @@ body {
 
 .front {
   z-index: 2;
-  border: 1px steelblue solid;
+  /* border: 1px steelblue solid; */
   vertical-align: middle;
 }
 
@@ -96,6 +96,7 @@ body {
 .glow {
   box-shadow: 15px 0px 100px 12px #ffffff, 0 0 40px 9px rgba(255, 253, 224, 0.7);
   transition: all 1s ease-in-out;
+  transition-delay: 0.2s;
 }
 
 h1 {
@@ -114,6 +115,19 @@ h1 {
 @media (max-width: 1060px) {
   .image-grid {
     padding: 20px;
+  }
+
+  .image-grid img {
+    height: 200px;
+  }
+
+  .flip-container {
+    height: 200px;
+  }
+
+  .front,
+  .back {
+    height: 200px;
   }
 }
 

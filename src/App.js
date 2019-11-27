@@ -13,7 +13,7 @@ function App() {
   let localData = JSON.parse(localStorage.getItem("openedDoors"));
 
   const [openedArr, setOpenedArr] = useState(localData ? localData : []);
-  const month = 10;
+  const month = 11;
   const today = new Date();
 
   const openDoor = e => {
@@ -24,6 +24,9 @@ function App() {
       setOpenedArr(newValue);
       localStorage.setItem("openedDoors", JSON.stringify(newValue));
       localData = JSON.parse(localStorage.getItem("openedDoors"));
+    } else {
+      console.log("NO PEEKING");
+      alert("NO PEEKING!");
     }
   };
 

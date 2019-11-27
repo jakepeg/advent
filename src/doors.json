@@ -56,7 +56,7 @@
   },
   {
     "door": "02",
-    "image": "https://media.giphy.com/media/1iTHo2aLKHaJw1DW/giphy.gif",
+    "image": "http://giphygifs.s3.amazonaws.com/media/K90ckojkohXfW/giphy.gif",
     "message": "Message for day 2"
   },
   {
@@ -101,7 +101,7 @@
   },
   {
     "door": "01",
-    "image": "http://giphygifs.s3.amazonaws.com/media/K90ckojkohXfW/giphy.gif",
+    "image": "https://media.giphy.com/media/1iTHo2aLKHaJw1DW/giphy.gif",
     "message": "Message for day 4"
   },
   {
