@@ -61,6 +61,7 @@ function Footer() {
             name="contact"
             method="POST"
             data-netlify="true"
+            netlify
           >
             <input type="hidden" name="form-name" value="contact" />
             <input
