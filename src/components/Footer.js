@@ -56,14 +56,13 @@ function Footer() {
         <div className="footer-panel">
           Get reminders
           <br />
-          <form
-            netlify
+          <form name="contact" method="POST" data-netlify="true">
+            {/* <form
             className="contactForm"
             name="contact"
             method="POST"
             data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="contact" />
+          > */}
             <input
               type="email"
               id="email"
