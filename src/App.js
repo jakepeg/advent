@@ -5,15 +5,9 @@ import { Helmet } from "react-helmet";
 import Footer from "./components/Footer";
 
 function App() {
-  const clearLocalData = () => {
-    localStorage.clear();
-    console.log("clear localData");
-  };
-
   let localData = JSON.parse(localStorage.getItem("openedDoors"));
-
   const [openedArr, setOpenedArr] = useState(localData ? localData : []);
-  const month = 11;
+  const month = 10;
   const today = new Date();
 
   const openDoor = e => {
@@ -25,7 +19,6 @@ function App() {
       localStorage.setItem("openedDoors", JSON.stringify(newValue));
       localData = JSON.parse(localStorage.getItem("openedDoors"));
     } else {
-      console.log("NO PEEKING");
       alert("NO PEEKING!");
     }
   };
@@ -38,6 +31,8 @@ function App() {
         <meta name="description" content="Online Advent Calendar" />
         <meta property="og:description" content="Online Advent Calendar" />
       </Helmet>
+      <img className="Logo" src={require("./logo.svg")} />
+
       <h1>Christmas is coming!</h1>
       <ul className="image-grid">
         {data.map(item => (

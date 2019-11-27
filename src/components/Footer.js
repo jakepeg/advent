@@ -15,6 +15,12 @@ import Mailchimp from "react-mailchimp-form";
 ReactGA.initialize("UA-153283716-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+const clearLocalData = () => {
+  localStorage.clear();
+  console.log("clear localData");
+  window.location.reload(false);
+};
+
 function Footer() {
   return (
     <div>
@@ -25,6 +31,11 @@ function Footer() {
             <a href="https://www.jakekemsley.com" target="_blank">
               Kempo
             </a>
+            <br />
+            <br />
+            <span onClick={clearLocalData} className="reset-button">
+              Reset doors
+            </span>
           </p>
         </div>
         <div className="footer-panel">

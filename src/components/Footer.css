@@ -55,6 +55,18 @@ form button {
   width: 70px;
 }
 
+.reset-button {
+  font-family: Arial, sans-serif;
+  outline: none;
+  font-size: 14px;
+  background: steelblue;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: #ffffff;
+  height: 28px;
+  width: 70px;
+  cursor: pointer;
+}
+
 @media (max-width: 1060px) {
   .footer {
     margin: 10px 25px 30px 25px;

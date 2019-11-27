@@ -70,9 +70,9 @@
     "message": "Message for day 8"
   },
   {
-    "door": "11",
+    "door": "01",
     "image": "https://media.giphy.com/media/3ohs87F3CQBSdG8c0g/giphy.gif",
-    "message": "Message for day 11"
+    "message": "Message for day 1"
   },
   {
     "door": "04",
@@ -100,9 +100,9 @@
     "message": "Message for day 20"
   },
   {
-    "door": "01",
+    "door": "11",
     "image": "https://media.giphy.com/media/1iTHo2aLKHaJw1DW/giphy.gif",
-    "message": "Message for day 4"
+    "message": "Message for day 11"
   },
   {
     "door": "15",
