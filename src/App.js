@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 function App() {
   let localData = JSON.parse(localStorage.getItem("openedDoors"));
   const [openedArr, setOpenedArr] = useState(localData ? localData : []);
-  const month = 10;
+  const month = 11;
   const today = new Date();
 
   const openDoor = e => {
